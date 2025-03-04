@@ -27,7 +27,7 @@ const Home = () => {
 
   const fetchAndSpeakData = async () => { 
     try {
-      const response = await axios.get('http://localhost:5000/scrape');  
+      const response = await axios.get('/api/scrape');  //changed to '/api/scrape' from 'http://localhost:5000/scrape'
       const { scrapedData } = response.data;
       setScrapedData(scrapedData);
 
